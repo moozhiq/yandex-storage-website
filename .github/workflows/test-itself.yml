@@ -1,0 +1,15 @@
+name: "test itself"
+on:
+    push:
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: ./
+              with:
+                  accessKeyId: fP4yNoDe0vv7CFobYfWl
+                  secretAccessKey: jk8G5oY7JwEcsoRm2_GIISCIwKxfzdoRQRi8i6H8
+                  bucket: www.testtime.com
+                  path: "./src"
+                  clear: true
